@@ -84,24 +84,29 @@ internal class Program
         ////a list of strings where each item is unique
         //List<string> list = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
         ////ask user to input text to sear for in the list
-        //Console.WriteLine("Type a day of the week to loor for in the list");
+        //Console.WriteLine("Type a day of the week to look for in the list");
         //string dayInput = Console.ReadLine();
         //int index = list.IndexOf(dayInput);
 
         ////created a loop that iterates through the list and displaysthe index that matches the content in input
         //for (int i= 0; i < list.Count; i++)
         //{
-        //    if (list[i] == dayInput)
+        //    if (dayInput == list[i])
         //    {
         //        Console.WriteLine(list[i] + " index is "+ index);
-        //    }
-        //    if (dayInput != list[i])
-        //    {
-        //        Console.WriteLine("That is not in the list");
         //        break;
         //    }
+        //    else if (dayInput != list[i])
+        //    {
+        //        Console.WriteLine("This input is not in the list");
+                
+        //    }
+
         //}
+     
+
         //Console.ReadLine();
+
 
 
 
@@ -132,7 +137,7 @@ internal class Program
 
 
 
-        //PART 6
+        ////PART 6
         ////create list of strings with two identicla items
         //List<string> names = new List<string>() { "Anne", "Brianna", "Camille", "Doreen", "Anne" };
         ////create empty list to add repeated items
@@ -155,7 +160,6 @@ internal class Program
         //        {
         //            Console.WriteLine(name + " is unique");
         //        }
-
         //    }
 
         //}
