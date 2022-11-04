@@ -1,4 +1,4 @@
-﻿using System;
+﻿                                                                                                                         using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -84,88 +84,90 @@ internal class Program
         ////a list of strings where each item is unique
         //List<string> list = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
         ////ask user to input text to sear for in the list
-        //Console.WriteLine("Type a day of the week to look for in the list");
+        //Console.WriteLine("Type a day of the week to look for it in the list");
         //string dayInput = Console.ReadLine();
         //int index = list.IndexOf(dayInput);
-
         ////created a loop that iterates through the list and displaysthe index that matches the content in input
         //for (int i= 0; i < list.Count; i++)
         //{
         //    if (dayInput == list[i])
         //    {
-        //        Console.WriteLine(list[i] + " index is "+ index);
+        //       Console.WriteLine(list[i] + " index is "+ index);
         //        break;
         //    }
-        //    else if (dayInput != list[i])
+        //    else if (!list.Contains(dayInput))
         //    {
         //        Console.WriteLine("This input is not in the list");
-                
+        //
         //    }
-
+        //
         //}
-     
-
+        //
+        //
         //Console.ReadLine();
 
 
 
 
-        //PART 5 
-        //Added a list of strings with two identicalstrings
-        List<string> classroom = new List<string>() { "Roberto", "Andrea", "Roberto", "Paris", "Sofia", "Israel" };
-        //Ask user to select text to search from the list
-        Console.WriteLine("choose a classmate");
-        string classmateChoose = Console.ReadLine();
-        int idx = classroom.IndexOf(classmateChoose);
+        ////PART 5 
+        ////Added a list of strings with two identicalstrings
+        //List<string> classroom = new List<string>() { "roberto", "andrea", "roberto", "paris", "sofia", "israel" };
+        ////Ask user to select text to search from the list
+        //Console.WriteLine("choose a classmate");
+        //string classmateChoose = Console.ReadLine();
+        //int idx = classroom.IndexOf(classmateChoose); 
 
 
-        //create a loop that iterates through the list and displays index of items that match the input text
-        foreach (string classmate in classroom)
-        {
-            if (classmate == classmateChoose)
-            {
-                Console.WriteLine(classmate + " has index " + idx);
-                
-            }
-            if (classmateChoose != classmate)
-            {
-                Console.WriteLine("This is not in the list");
-                break;
-            }
-        }
-        Console.ReadLine();
-
-
-
-        ////PART 6
-        ////create list of strings with two identicla items
-        //List<string> names = new List<string>() { "Anne", "Brianna", "Camille", "Doreen", "Anne" };
-        ////create empty list to add repeated items
-        //List<string> repeatedNames = new List<string>();
-
-
-        ////create foreach loop that iterates throught the list
-        //foreach (string name in names)
+        ////create a loop that iterates through the list and displays index of items that match the input text
+        //for (int a = 0; a < classroom.Count; a++)
         //{
-        //    //created a for loop that fives n a value to compare
-        //    for (int n = 0; n < 4; n++)
+        //    if (classroom[a] == classmateChoose)
         //    {
-        //        //created if loop that adds item to list
-        //        if (name == names[n])
-        //        {
-        //            repeatedNames.Add(name);
-        //        }
-        //        //created an if loop that prints unique items
-        //        if (name != names[n])
-        //        {
-        //            Console.WriteLine(name + " is unique");
-        //        }
+        //        Console.WriteLine(classmateChoose + " has index " + idx);
+        //        
         //    }
-
+        //    if (!classroom.Contains(classmateChoose))
+        //    {
+        //        Console.WriteLine("This is not in the list");
+        //        break;
+        //    }
+        //    idx++;
         //}
-        //Console.WriteLine(repeatedNames[0] + " is a duplicate");
-
         //Console.ReadLine();
+
+
+
+        //PART 6
+        //create list of strings with two identicla items
+        List<string> names = new List<string>() { "Anne", "Brianna", "Camille", "Doreen", "Anne" };
+        //create empty list to add repeated items
+        List<string> repeatedNames = new List<string>();
+        int n = 0;
+
+
+        //create foreach loop that iterates throught the list
+        foreach (string name in names)
+        {
+
+            //created if loop that adds item to list
+            if (name == names[n])
+            {
+                repeatedNames.Add(name);
+                //print duplicate in items found in the repeates names list
+                if (!repeatedNames.Contains(name))
+                {
+                    Console.WriteLine(name + " is a unique item");
+                }
+                else
+                {
+                    Console.WriteLine(name + " is a duplicate item");
+                }
+            }
+            n++;
+            
+        }
+       
+        Console.ReadLine();
 
 
     }
