@@ -148,24 +148,18 @@ internal class Program
         //create foreach loop that iterates throught the list
         foreach (string name in names)
         {
-
-            //created if loop that adds item to list
-            if (name == names[n])
+            //print duplicate in items found in the repeates names list
+            if (!repeatedNames.Contains(name))
             {
+                Console.WriteLine(name + " is a unique item");
                 repeatedNames.Add(name);
-                //print duplicate in items found in the repeates names list
-                if (!repeatedNames.Contains(name))
-                {
-                    Console.WriteLine(name + " is a unique item");
-                }
-                else
-                {
-                    Console.WriteLine(name + " is a duplicate item");
-                }
             }
-            n++;
-            
+            else
+            {
+                Console.WriteLine(name + " is a duplicate item");
+            }
         }
+
        
         Console.ReadLine();
 
